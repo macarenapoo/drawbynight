@@ -1,0 +1,42 @@
+{
+  "name": "drawbynight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "development": "cp views/index.html public/index.html && NODE_ENV=development webpack && webpack-dev-server --content-base public/ --hot --inline --devtool inline-source-map --history-api-fallback",
+    "production": "rm -rf public/index.html && NODE_ENV=production webpack -p && NODE_ENV=production node app.js",
+    "start": "npm run production"
+  },
+  "author": "Macarena Poo",
+  "license": "ISC",
+  "dependencies": {
+    "cosmicjs": "^2.1.2",
+    "express": "^4.13.4",
+    "hogan-express": "^0.5.2",
+    "instagram-node-lib": "^0.1.1",
+    "react": "15.1.0",
+    "react-dom": "15.1.0",
+    "react-redux": "4.4.5",
+    "react-router": "^2.4.1",
+    "redux": "3.5.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "6.3.6",
+    "axios": "^0.11.1",
+    "babel-core": "6.9.0",
+    "babel-loader": "6.2.4",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-react": "6.5.0",
+    "css-loader": "0.23.1",
+    "extract-text-webpack-plugin": "1.0.1",
+    "lodash": "^4.12.0",
+    "postcss": "5.0.21",
+    "postcss-loader": "0.9.1",
+    "postcss-simple-vars": "2.0.0",
+    "redux-devtools": "3.3.1",
+    "style-loader": "0.13.1",
+    "webpack": "1.13.1",
+    "webpack-dev-server": "1.14.1"
+  }
+}
